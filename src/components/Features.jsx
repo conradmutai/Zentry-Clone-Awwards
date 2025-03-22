@@ -1,5 +1,6 @@
 import {useRef, useState} from 'react'
 import { TiLocationArrow } from "react-icons/ti";
+import Button from "./Button.jsx";
 
 const BentoTilt = ({ children, className = ' ' }) => {
     const [transformStyle, setTransformStyle] = useState("")
@@ -56,6 +57,12 @@ const BentoCard =({ src, title, description }) => {
                         <p className={"mt-3 max-w-64 text-xs md:text-base"}>{description}</p>
                     )}
                 </div>
+
+                <Button
+                    id={"isComingSoon"}
+                    title={"Is Coming Soon"}
+                    containerClass={'!bg-black flex-center gap-1 text-blue-50'}
+                />
             </div>
             {title}
         </div>
@@ -79,7 +86,7 @@ const Features = () => {
                 <BentoTilt className={"border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]"}>
                     <BentoCard
                         src={"videos/feature-1.mp4"}
-                        title={<>radi<b>n</b>t</>}
+                        title={<>radia<b>n</b>t</>}
                         description={"A cross-platform metagame app, tuning your activities across Web2 and Web3 games into a rewarding adventure."}
                     />
                 </BentoTilt>
@@ -89,7 +96,7 @@ const Features = () => {
                         <BentoCard
                             src={"videos/feature-2.mp4"}
                             title={<>zig<b>m</b>a</>}
-                            description={"An anime and gaming-inspired NFT collection - the IP primed for expantion"}
+                            description={"An anime and gaming-inspired NFT collection - the IP primed for expansion"}
                         />
                     </BentoTilt>
 
